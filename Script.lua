@@ -1,1 +1,27 @@
 print("Lua Obfuscator by Pyan")
+local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/discord%20lib.txt")()
+
+local win = DiscordLib:Window("The ScriptLab Loader")
+
+local serv = win:Server("Preview", "")
+
+local btns = serv:Channel("Loader")
+
+_G.Key = "PizzaParty"
+_G.KeyInput = "string"
+
+btns:Textbox("Key", "Type here!", true, function(Value)
+_G.KeyInput = Value
+end)
+
+btns:Button("Check Key", function()
+if _G.KeyInput == _G.Key then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NICKISBAD/NIX-HUB/main/Nick's%20ScriptLab.txt?token=GHSAT0AAAAAAB3EE2PLERMXHSXMTZPH7XOAY5VUGVA"))()
+wait(1.2)
+game.StarterGui:SetCore("SendNotification", {
+Title = "Key Entered!";
+Text = "Correct Key Entered!";
+Duration = 6;
+})
+end
+end)
